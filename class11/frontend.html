@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>document</title>
+        <style>
+            #container{
+                display:grid;
+                grid-template-rows:repeat(4,200px);
+                grid-template-columns:repeat(4,1fr);
+                gap:20px;
+            }
+        
+            
+        </style>
+    </head>
+    <body>
+        <h1>frontend</h1>
+        <div id="container"></div>
+    </body>
+</html>
+<script>
+    var investorArr=JSON.parse(localStorage.getItem("investorData"))
+    console.log(investorArr);
+</script>

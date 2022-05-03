@@ -1,0 +1,18 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="head-1">DOM-1 assignment</h1>
+        <button id="btn" onClick="completeAssignment()">mark as completed</button>
+    </body>
+</html>
+<script>
+    function completeAssignment(){
+        document.getElementById("head-1").innerText="DOM-1 assignment completed";
+    
+        document.getElementById("btn").innerText="completed";
+        document.getElementById("btn").style.backgroundColor="green";
+        document.getElementById("btn").style.color="red";
+    }
+</script>

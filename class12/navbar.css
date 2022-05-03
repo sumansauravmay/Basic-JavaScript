@@ -1,0 +1,31 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    background-color:rgb(218, 212, 212);
+}
+.nav{
+    display:flex;
+    height:80px;
+    width:100%;
+    background-color:white;
+}
+.logo{
+    width:20%;
+}
+.text{
+    width:50%;
+    display:flex;
+    justify-content:space-around;
+}
+.user{
+    width:30%;
+    display:flex;
+    justify-content:space-around;
+}
+.user>h2{
+color:blue;
+cursor:pointer;
+
+}

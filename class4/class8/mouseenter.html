@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>sumansaurav</title>
+        <style>
+            div{
+                height:200px;
+                width:200px;
+                
+                background-color:teal;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
+<script>
+    document.querySelector("div").addEventListener("mouseenter",changbg)
+    document.querySelector("div").addEventListener("mouseleave",changeToDefault)
+    function changbg (){
+document.querySelector("div").style.backgroundColor="red";
+document.querySelector("div").style.cursor="pointer";
+    }
+    function changeToDefault() {
+        document.querySelector("div").style.backgroundColor="teal";
+        document.querySelector("div").style.cursor="pointer";
+    }
+</script>

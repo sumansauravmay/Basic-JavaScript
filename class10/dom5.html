@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>suman saurav</title>
+    </head>
+    <body></body>
+</html>
+<script>
+    var buttonsData=[
+        {name:"primary",color:"white",backgroundColor:"red"},
+        {name:"Secondary",color:"white",backgroundColor:"green"},
+        {name:"Info",color:"black",backgroundColor:"yellow"},
+        {name:"Danger",color:"white",backgroundColor:"blue"},
+        {name:"Warning",color:"white",backgroundColor:"grey"},
+        {name:"Light",color:"white",backgroundColor:"cyan"},
+        {name:"Success",color:"white",backgroundColor:"black"},
+        {name:"Dark",color:"white",backgroundColor:"brown"},
+        {name:"Link",color:"white",backgroundColor:"pink"}
+    ]
+    buttonsData.forEach(function (elem) {
+    
+        var btn=document.createElement("button")
+        btn.innerText=elem.name
+        btn.style.color=elem.color
+        btn.style.backgroundColor=elem.backgroundColor
+        document.querySelector("body").append(btn)
+    });
+</script>

@@ -1,0 +1,117 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product page</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+</head>
+<style>
+    .products{
+        display:grid;
+        width:98%;
+        margin:auto;
+        grid-template-columns:repeat(3,1fr);
+        
+    }
+    .products>div{
+        width:30%;
+
+    }
+    .product img{
+        width:100%;
+    }
+</style>
+<body>
+<select name="" id="">
+    <option value="casual">casual</option>
+    <option value="casual">casual</option>
+    <option value="party">festival</option>
+    <option value="party">party</option>
+    <option value=""></option>
+    <option value=""></option>
+</select>
+<div class="product"></div>
+</body>
+</html>
+<script>
+    var products_data=[
+    {
+    brand: "Puma",
+    name: "selena floral FileList",
+    price: "2000",
+    size: "X,XX,XXL",
+    productID: "women1",
+    catagory: "Casual",
+    img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/t/w/twentydressesmix_dr0935_1_984da863.jpg?rnd=20200526195200",
+  },
+  {
+    brand: "Gap",
+    name: "balck bella",
+    price: "1347",
+    size: "X,M,L,XX,XXL",
+    productID: "women2",
+    catagory: "festive",
+    img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/1/4/146117301_1_7fcd0574.jpg?rnd=20200526195200",
+  },
+  {
+    brand: "Puma",
+    name: "chil pill supersoft palysuit",
+    price: "799",
+    size: "M,L,XX,XXS",
+    productID: "women3",
+    catagory: "party",
+    img: "https://adn-static1.nykaa.com/nykdesignstudio-images/tr:w-550,/pub/media/catalog/product/a/c/achwsivc466_1_a6c9da54.jpg?rnd=20200526195200",
+  },
+    ]
+    localStorage.setItem("masai",JSON.stringify(product_data));
+
+    let cartLSData=JSON.parse(localStorage.getItem("masai-cart"))||[];
+
+    var products=document.querySelector("products");
+var filter=document.queryselector("select");
+
+    function display(data){
+        products.innerHTML=null;
+        data.forEach(function(elemet){
+            var card=document.createElement("div");
+            var img=document.createelement("img");
+            img.src=element.img;
+            var title=document.createElement("h2");
+            title.textContent=element.brand;
+
+            var category=document.createElement("p")
+            category.textContent=category;
+
+            var price=document.createElement("h2");
+            price.textContent=element.price;
+
+            var button=document.createElement("button")
+            button.innerText="Add to cart"
+            button.addEventListener("click",function(){
+                AddToCart(element)
+            })
+            
+            card.append(img,title,desc,category,price,button)
+            product.append(card);
+        })
+    }
+    display(product_data)
+    filter.addEventListener("change",function(){
+        if(filter.value=="none"){
+            display(product_data)
+        }
+        else{
+            var filtered=product_data.filter(function(element){
+                return element.category==filter.value;
+            })
+            display(filtered);
+        }
+    })
+
+    function AddtoCart(element){
+cardLSData.push(element);
+localStorage.setItem("masai-cart",JSON.stringify(cartLSData));
+    alert("product added successfully")
+    }
+</script>

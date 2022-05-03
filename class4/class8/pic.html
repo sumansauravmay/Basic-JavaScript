@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>sonu</title>
+    </head>
+    <body>
+        <img src="" alt=""/>
+        <br/>
+        <h2 id="likes">show likes count here</h2>
+        <h2 id="dislikes">show dislikes count here</h2>
+        <button id="like">like</button>
+        <button id="dislike">dislike</button>
+    </body>
+</html>
+<script>
+    document.querySelector("#like").addEventListener("click",likeFun)
+    document.querySelector("#dislike").addEventListener("click",dislikeFun)
+    var likes=0;
+    var dislikes=0;
+    function likeFun(){
+        likes++
+        document.getElementById("likes").innerText="likes-"+likes;
+    }
+    function dislikeFun(){
+        dislikes++
+        document.getElementById("dislikes").innerText="dislikes-"+dislikes;
+    }
+</script>

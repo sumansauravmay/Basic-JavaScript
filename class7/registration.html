@@ -1,0 +1,69 @@
+
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+		function showName() {
+			// Show filled name inside h1
+            var name=document.getElementById("dName").innerText="Suman Saurav";
+            console.log(name);
+		}
+
+		function showGender() {
+			// Show the selected gender inside 
+            var gender=document.getElementById("dGender").innerText="Male";
+			console.log(gender);
+		}
+
+		function showEmail() {
+			// Show the filled email inside h3
+			var email=document.getElementById("dEmail").innerText="sumansauravmay12345@gmail.com";
+			console.log(email);
+		}
+
+		function showMobile() {
+			// Show the filled mobile inside h4
+			var mobile=document.getElementById("dMobile").innerText="7654839189";
+			console.log(mobile);
+		}
+
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+			var gender=document.getElementById("dName").innerText="Name";
+			var gender=document.getElementById("dGender").innerText="Gender"
+			var gender=document.getElementById("dEmail").innerText="EMAIL"
+			var gender=document.getElementById("dMobile").innerText="MOBILE"
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+			var gender=document.getElementById("dName").innerText="Suman Saurav";
+			var gender=document.getElementById("dGender").innerText="Male";
+			var gender=document.getElementById("dEmail").innerText="sumansauravmay12345@gmail.com";
+			var gender=document.getElementById("dMobile").innerText="7654839189";
+		}
+	</script>
+</body>
+<

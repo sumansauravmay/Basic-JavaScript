@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>lakshya</title>
+        <style>
+#calculator{
+    height:auto;
+    width:30%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin:auto;
+}
+#display{
+    height:50px;
+    width:95%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin:auto;
+    margin-top:10px;
+    border-radius:20px;
+
+}
+#keyboard {
+    display:grid;
+    grid-template-rows:repeat(4,auto);
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    
+}
+#keyboard>div{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    height:30%;
+    width:60%;
+    border-radius:10px;
+    font-size:30px;
+    color:black;
+    padding:20px 10px 20px 20px;
+    margin:auto;
+    font-weight:bold;
+    
+}
+#keyboard>.black{
+    
+    background-color:black;
+    color:aliceblue
+}
+#keyboard>.red{
+    background-color:red;
+    color:beige
+}
+#center{
+    text-align:center;
+    font-size:60px;
+    color:teal;
+}
+#keyboard>.black:hover{
+    color:brown;
+    background-color:blue;
+}
+#keyboard>.red:hover{
+    color:green;
+    background-color:yellow;
+}
+#keyboard>div:hover{
+    color:green;
+    background-color:aquamarine
+}
+#display{
+    font-size:30px;
+    display:flex;
+    text-align:center;
+    justify-content:center;
+}
+        </style>
+    </head>
+    <body>
+        <h1 id="center">Masai School</h1>
+        <div id="calculator">
+            <div id="display"></div>
+            <div id="keyboard">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div class="black">+</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div class="black">-</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div class="black">*</div>
+                <div class="red">C</div>
+                <div>0</div>
+                <div class="black">=</div>
+                <div class="black">/</div>
+    
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    var work=document.querySelectorAll("#keyboard>div");
+    bag="";
+    for(var i=0;i<work.length;i++)
+    {
+    work[i].addEventListener("click",myCalculator)
+    }
+    function myCalculator(){
+var getTarget=event.target.innerText;
+    
+if(getTarget=="C")
+{
+    document.querySelector("#display").innerText="";
+}
+else if(getTarget=="=")
+{
+    console.log(eval(bag));
+    document.querySelector("#display").innerText=eval(bag);
+}
+else
+{
+    bag=bag+getTarget;
+document.querySelector("#display").innerText=bag;
+}
+
+    }
+</script>

@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>suman saurav</title>
+        <style>
+            #container{
+                display:grid;
+                grid-template-columns:repeat(4,1fr);
+                grid-template-rows:repeat(5,auto);
+                gap:20px;
+            };
+            p+img{
+                height:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+    </body>
+</html>
+<script>
+    var obj=[
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {pic:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        name:"sekhar",position:"founder",logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        
+    ];
+    obj.forEach(function(elem){
+        var box=document.createElement("div");
+
+        var investpic=document.createElement("img");
+        investpic.setAttribute("src",elem.pic)
+
+        var investname=document.createElement("h2");
+        investname.innerText=elem.name;
+
+        var investposition=document.createElement("p")
+        investposition.innerText=elem.position;
+
+        var investlogo=document.createElement("img");
+        investlogo.setAttribute("src",elem.logo);
+
+        box.append(investpic,investname,investposition,investlogo);
+        
+        document.querySelector("#container").append(box);
+        
+    })
+</script>

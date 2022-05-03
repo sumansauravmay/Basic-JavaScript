@@ -1,0 +1,21 @@
+<html>
+    <head>
+<title>document</title>
+    </head>
+    <body>
+<input type="number" id="head-1"/>
+<button onClick="checkAge()">submit</button>
+    </body>
+</html>
+<script>
+    function checkAge(){
+        var age=document.getElementById("head-1").value;
+        if(age>=18)
+        {
+            alert("You can Marry")
+        }
+        else{
+            alert("You can't Marry")
+        }
+    }
+</script>

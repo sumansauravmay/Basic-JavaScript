@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>suman</title>
+    </head>
+    <body>
+        <form>
+            <input id="name" type="text" placeholder="Enter Name"/>
+            <input id="mob" type="number" placeholder="Enter mobile number"/>
+            <input type="submit" value="login" />
+        </form>
+        
+    </body>
+</html>
+<script>
+document.querySelector("form").addEventListener("submit",myFunction);
+function myFunction(){
+    event.preventDefault()
+    var name=document.querySelector("#name");
+    var mob=document.querySelector("#mob");
+    console.log(name);
+    console.log(mob);
+}
+</script>

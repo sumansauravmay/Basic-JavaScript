@@ -1,0 +1,24 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input id="name" type="text" placeholder="Eter Name" value=""/>
+        <input id="mbl" type="number" placeholder="Enter mobile numbr" value=""/>
+        <input id="mail" type="email" placeholder="Enter email id" value=""/>
+        <button onClick="catchValue()">submit</button>
+        <h1 id="display-name">show name here</h1>
+        <h1 id="display-mbl">show mobile here</h1>
+        <h1 id="display-mail">show email</h1>
+    </body>
+</html>
+<script>
+    function catchValue(){
+        var studentName=document.getElementById("name").value;
+        var mblNum=document.getElementById("mbl").value;
+        var mail=document.getElementById("mail").value;
+        document.getElementById("display-name").innerText=studentName;
+        document.getElementById("display-mbl").innerText=mblNum;
+        document.getElementById("display-mail").innerText=mail;
+    }
+</script>

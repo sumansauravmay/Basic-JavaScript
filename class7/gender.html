@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>document</title>
+    </head>
+    <body>
+<select id="gender">
+    <option value="">select gender</option>
+    <option value="Male">male</option>
+    <option value="Female">female</option>
+</select>
+<button onClick="getGender()">submit</button>
+    </body>
+</html>
+<script>
+function getGender(){
+    var gen=document.getElementById("gender").value;
+    console.log(gen);
+}
+</script>

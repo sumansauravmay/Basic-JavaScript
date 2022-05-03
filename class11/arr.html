@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>sonu</title>
+    </head>
+    <body></body>
+</html>
+<script>
+    var numbers=[1,6,8,9]
+    localStorage.setItem("luckynumber",JSON.stringify(numbers));
+    var array=JSON.parse(localStorage.getItem("luckynumber"));
+    console.log(array)
+    console.log(typeof array)
+    var names=["anurag","mahesh","ranveer"]
+    localStorage.setItem("studentName",JSON.stringify(names));
+    var out1=localStorage.getItem("studentName")
+    console.log(out1)
+</script>

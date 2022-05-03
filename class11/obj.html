@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>suman</title>
+    </head>
+    <body></body>
+</html>
+<script>
+    var obj={name:"shubham",place:"london"};
+    localStorage.setItem("dataobj",JSON.stringify(obj));
+    var out=JSON.parse(localStorage.getItem("dataobj"));
+    console.log(out)
+    
+</script>

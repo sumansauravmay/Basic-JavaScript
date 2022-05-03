@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="navbar.css" />
+</head>
+<body>
+<div class="nav">
+<div class="logo">
+    <h1>Masai-E-Comm</h1>
+</div>
+<div class="text">
+    <h2>Men</h2>
+    <h2><a href="product.html">Women</a></h2>
+    <h2>Kids</h2>
+</div>
+<div class="user">
+    <h2><a href="signup.html"></a>Sign up</h2>
+    <h2><a href="signin.html"></a>Sign in</h2>
+</div>
+</div>
+</body>
+</html>
+<script>
+    var signinData=JSON.parse.lcalStorage.getItem("signin");
+    var user=document.querySelector(".user");
+if(signinData != null)
+{
+    user.innerHTML='<h2>User</h2>'
+    '<h2><a href="cart.html">Cart</a></h2>';
+}
+    </script>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>document</title>
+    </head>
+    <body>
+        <img height="200px" width="300px" src="https://pbs.twimg.com/card_img/1516851816222310400/TCyye49Z?format=jpg&name=360x360" alt=""/>
+    <br>
+    
+    <h2 id="likes">show likes count here</h2>
+    <h2 id="dislikes">show dislikes count here</h2>
+    <button onClick="likeFun()">like</button>
+    <button onClick="dislikeFun()">dislike</button>
+    </body>
+</html>
+<script>
+    var dislikes=0;
+    var likes=0;
+    function likeFun(){
+        likes++;
+        document.getElementById("likes").innerText="likes-"+likes;
+    }
+        function dislikeFun(){
+            dislikes++
+            document.getElementById("dislikes").innerText="dislikes-"+dislikes;
+        }
+    
+</script>

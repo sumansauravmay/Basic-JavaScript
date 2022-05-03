@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button id="btn1">Change H1</button>
+        <button id="btn2">Change H3</button>
+        <button id="btn3">Change H5</button>
+        <button id="btn4">Change Green</button>
+        <button id="btn5">Change Red</button>
+        <button id="btn6">Change Blue</button>
+        <script>
+ document.querySelector("#btn1").addEventListener("click",changeH1)
+ document.querySelector("#btn2").addEventListener("click",allH3)
+ document.querySelector("#btn3").addEventListener("click",allH5)
+ document.querySelector("#btn4").addEventListener("click",changr)
+ document.querySelector("#btn5").addEventListener("click",cnbl)
+ document.querySelector("#btn6").addEventListener("click",changbl)
+ function changeH1(){
+     document.querySelector("h1").style.color="red";
+ }
+ function allH3(){
+     var h3=document.querySelectorAll("h3")
+     for(var i=0;i<h3.length;i++)
+     {
+         console.log(h3[i])
+         h3[i].style.color="green"; 
+     }
+ }
+ function allH5 (){
+     var h4=document.querySelectorAll("h5")
+     for(var j=0;j<h4.length;j++)
+     {
+         console.log(h4[j])
+         h4[j].style.color="blue";
+     }
+ }
+ function changr(){
+     var green=document.querySelectorAll(".green")
+     for(var i=0;i<green.length;i++)
+     {
+         console.log(green[i])
+         green[i].style.color="green";
+     }
+ }
+ function cnbl(){
+     var red=document.querySelectorAll(".red")
+     for(var i=0;i<red.length;i++)
+     {
+         console.log(red[i]);
+         red[i].style.color="red";
+     }
+ }
+ function changbl(){
+     var blue=document.querySelectorAll(".blue")
+     for(var i=0;i<blue.length;i++)
+     {
+         console.log(blue[i])
+         blue[i].style.color="blue";
+     }
+ }
+        </script>
+    </body>
+</html>
